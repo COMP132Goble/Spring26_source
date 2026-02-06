@@ -1,5 +1,6 @@
 package Composition.GoodStudentExample;
 
+import Composition.Employee.Date;
 /**
  * A class representing a Student. This class improves on the design shown in 
  * badStudentDesign by using Composition to create the Student. Separate classes 
@@ -19,6 +20,8 @@ public class Student {
     private Course course2;
     private Course course3;
     private Course course4;
+
+    private Date birthDay;
 
     /*
      * Constructors, accessors, and mutators have been intentially omitted 
