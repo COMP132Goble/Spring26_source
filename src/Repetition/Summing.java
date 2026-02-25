@@ -7,7 +7,7 @@ public class Summing {
         int value;
         System.out.print("Please enter an integer: ");
         value = input.nextInt();
-
+        input.close();
         int sum = 0;
         int i;
         for(i = 0; i <= value; i++) {

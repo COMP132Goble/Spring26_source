@@ -3,8 +3,8 @@ public class Nested {
         int counter = 0;
         for(int i = 0; i < 10; i++) {
             for(int j = 0; j < 5; j++) {
-                counter++;
-                System.out.println("counter = " + counter);
+                // counter++;
+                System.out.println("i = " + i + " j = " + j);
             }
         }
     }

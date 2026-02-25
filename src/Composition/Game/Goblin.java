@@ -19,7 +19,7 @@ public class Goblin {
 
         if (numGoblins < 5) {
             minValue = 0.0;
-            maxValue = 0.0;
+            maxValue = 10.0;
         } else {
             minValue = 10.0;
             maxValue = 20.0;
