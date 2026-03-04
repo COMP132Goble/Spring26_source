@@ -24,7 +24,6 @@ public class Grades {
         
         switch (score / 10) {
             case 10: 
-                break;
             case 9:
                 grade = 'A';
                 break;

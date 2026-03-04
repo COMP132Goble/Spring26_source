@@ -22,7 +22,6 @@ public class WorkingWithArrays {
         for(int index = 0; index < temp.length; index++) {
             arr[index] = temp[index];
         }
-
     }
 
     public static void main(String[] args) {
