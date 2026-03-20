@@ -13,7 +13,19 @@ public class Justification {
 
         input.close();
 
-        System.out.println("x/y = " + (x/y));
+        try {
+            System.out.println("x/y = " + divide(x, y));
+        } catch(IllegalArgumentException e) {
+            System.out.println("bad maths");
+        }
+        
         System.out.println("We are now past the division!");
+    }
+
+    public static int divide(int a, int b) throws IllegalArgumentException{
+        if (b == 0) {
+            throw new IllegalArgumentException("second param cannot be zero");
+        }
+        return a / b;
     }
 }
