@@ -5,14 +5,20 @@ public class MySorting {
         
         int[] micro = MyTools.getRandomIntArray(0, 10000, 10);
         int[] small = MyTools.getRandomIntArray(0, 10000, 100);
-        int[] medium = MyTools.getRandomIntArray(0, 10000, 10000);
+        int[] medium = MyTools.getRandomIntArray(0, 10000, 1000);
         int[] large = MyTools.getRandomIntArray(0, 10000, 50000);
-
-        MyTools.printIntArray(small);
+        // int[] extra_large = MyTools.getRandomIntArray(0, 10000, 500000000);
+        // MyTools.printIntArray(large);
         // bubbleSort(arr, n); 
-        insertionSort(small);
-        System.out.println("===========================================================================================");
-        MyTools.printIntArray(small);
+        // insertionSort(small);
+        long startTime = System.nanoTime();
+        selectionSort(large);
+        long endTime = System.nanoTime();
+        long different = (endTime - startTime);
+        System.out.println(different);
+
+        // System.out.println("===========================================================================================");
+        // MyTools.printIntArray(large);
     }
 
     static void bubbleSort(int[] arr, int size) {
