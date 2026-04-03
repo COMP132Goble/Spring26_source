@@ -51,8 +51,19 @@ public class Product {
             new Product("C001", "Toaster", 29.99, 75, "Appliances"),
         };
 
+        System.out.println("=== Original Order ===");
         for(Product product: products) {
             System.out.println(product);
         }
+
+        System.out.println("=== Natural Order (by SKU) ===");
+
+        System.out.println("=== By Price ===");
+
+        System.out.println("=== By Quantity ===");
+
+        // Bonus practice
+        // First sort by category, then if there is a tie sort by price
+        System.out.println("=== By Category, then price ===");
     }
 }
