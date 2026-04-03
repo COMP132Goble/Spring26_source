@@ -14,7 +14,7 @@ public class OperationCount {
 
     static void arrayRotate(int[] arr) {
         int start = arr[0];
-        for(int i = 1; i < arr.length; i++) {
+        for(int i = 1; i < (arr.length) / 2; i++) {
             arr[i-1] = arr[i];
         }
         arr[arr.length - 1] = start;

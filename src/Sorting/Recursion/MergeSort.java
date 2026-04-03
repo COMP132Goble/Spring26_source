@@ -8,12 +8,12 @@ public class MergeSort {
         int[] unsorted = {64, 34, 25, 12, 22, 11, 90};
         MyTools.printIntArray(unsorted);
         System.out.println();
-        int[] sorted = mergerSort(unsorted);
+        int[] sorted = mergeSort(unsorted);
         MyTools.printIntArray(sorted);
         System.out.println();
     }
 
-    public static int[] mergerSort(int[] array) {
+    public static int[] mergeSort(int[] array) {
         if (array.length <= 1) {
             return array;
         }
@@ -23,8 +23,8 @@ public class MergeSort {
         int[] left = Arrays.copyOfRange(array, 0, middle);
         int[] right = Arrays.copyOfRange(array, middle, array.length);
 
-        int[] sortedLeft = mergerSort(left);
-        int[] sortedRight = mergerSort(right);
+        int[] sortedLeft = mergeSort(left);
+        int[] sortedRight = mergeSort(right);
 
         return merge(sortedLeft, sortedRight);
     }
