@@ -2,11 +2,13 @@ package DesignPatterns;
 
 public class Secret {
     private int answer;
+    private int answer2;
 
     private static Secret instance = null;
 
     private Secret() {
-        answer = 8;
+        answer = 870;
+        answer2 = 675;
     }
 
     public static synchronized Secret getAnswer() {
@@ -19,5 +21,9 @@ public class Secret {
 
     public boolean checkAnswer(int guess) {
         return guess == answer;
+    }
+
+    public boolean checkSecondAnswer(int guess) {
+        return guess == answer2;
     }
 }
