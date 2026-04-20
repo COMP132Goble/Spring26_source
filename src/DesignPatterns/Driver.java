@@ -1,10 +1,11 @@
 package DesignPatterns;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
-       //firstExample();
+    //    firstExample();
        secondExample(); 
     }
 
@@ -53,22 +54,26 @@ public class Driver {
         int guess1 = 0;
         int guess2 = 0;
 
+        ArrayList<Integer> player1Guesses = new ArrayList<Integer>();
+        ArrayList<Integer> player2Guesses = new ArrayList<Integer>();
+
         while(!player1Wins && !player2Wins) {
             System.out.println("Player 1: Guess a number ");
             guess1 = input.nextInt();
-            log1.log("Player1 guess: " + guess1);
+            player1Guesses.add(guess1);
+            // log1.log("Player1 guess: " + guess1);
 
             if (game.checkAnswer(guess1)) {
                 player1Wins = true;
                 break;
             }
 
-            
             System.out.println("Player 2: Guess a number ");
             guess2 = input.nextInt();
-            log2.log("Player2 guess: " + guess2); 
+            player2Guesses.add(guess2);
+            // log2.log("Player2 guess: " + guess2); 
 
-            if (game.checkAnswer(guess2)) {
+            if (game.checkSecondAnswer(guess2)) {
                 player2Wins = true;
                 break;
             }
@@ -82,6 +87,16 @@ public class Driver {
             System.out.println("Player1 wins!");
         } else if(player2Wins) {
             System.out.println("Player2 wins!");
+        }
+
+        log1.log("Player1 Gusses");
+        for(int i:player1Guesses) {
+            log1.log("" + i);
+        }
+
+        log2.log("Player2 Guesses");
+        for(int i:player2Guesses) {
+            log2.log("" + i);
         }
     }
 }

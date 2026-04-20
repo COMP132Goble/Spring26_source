@@ -30,3 +30,9 @@ class AirLogistics extends LogisticsFactory {
         return new Airplane();
     }
 }
+
+class TrainLogistics extends LogisticsFactory {
+    public Transport createTransport() {
+        return new Train();
+    }
+}

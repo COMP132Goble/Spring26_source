@@ -17,5 +17,10 @@ public class LogisticsApp {
         LogisticsFactory airLogistics = new AirLogistics();
         airLogistics.planDelivery("Paris (France, not Texas)", 3792);
         System.out.println();
+
+        // train delivery
+        LogisticsFactory trainLogistics = new TrainLogistics();
+        trainLogistics.planDelivery("Chicago", 645);
+        System.out.println();
     }
 }

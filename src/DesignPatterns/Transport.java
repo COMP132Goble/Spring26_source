@@ -20,6 +20,21 @@ class Truck implements Transport {
     }
 }
 
+class Train  implements Transport {
+    public void deliver(String destination) {
+        System.out.println("Delivering by train to " + destination);
+    }
+
+    public double calculateCost(double distance) {
+        return distance * 3;
+    }
+
+    public String getName() {
+        return "Train";
+    }
+    
+}
+
 class Ship implements Transport {
     public void deliver(String destination) {
         System.out.println("Shipping by ship to " + destination);
