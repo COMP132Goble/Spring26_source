@@ -2,22 +2,48 @@ package ADTs;
 
 public class MyLinkedList {
     private Node head;
+    private Node tail;
     private int size;
 
     public MyLinkedList() {
         this.head = null;
+        this.tail = null;
         this.size = 0;
     }
 
     public static void main(String[] args) {
         MyLinkedList myList = new MyLinkedList();
 
-        // myList.add("A");
-        // myList.add("B");
-        // myList.add("C");
+        System.out.println(myList);
+        myList.addFront("A");
+        System.out.println(myList);
+        myList.addFront("B");
+        System.out.println(myList);
+        myList.addFront("C");
 
         System.out.println(myList);
     }
+
+    public void addFront(String value) {
+        Node newNode = new Node(value);
+        newNode.next = head;
+        head = newNode;
+        size++;
+    }
+
+    public void addBack(String value) {
+        Node newNode = new Node(value);
+        
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
+
 
     public int size() {
         return size;
