@@ -22,7 +22,7 @@ extends    │
 ├────────────────────┤  
 │ + getStudentId()   │  
 │ + getGpa()         │  
-│ + introduce() ◄────┼── overrides parent method
+│ + introduce() ◄────┼── needs to override parent method
 └────────────────────┘  
 
 
